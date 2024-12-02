@@ -1,0 +1,155 @@
+                     UPM Enterprise License
+                     VERSION 1, July 1, 2024
+
+                    Copyright © 2009 BSG Ltd.
+
+0. Definitions.
+
+  "UPM" refers to Unified Platform Management, a cloud native management software designed, developed and owned by BSG.
+
+  "BSG" refers to BSG company. BSG is the licensor and the entity offering these terms. BSG official site URL: http://bsgchina.com/en/index.html
+
+  “This License” refers to Server Side Public License.
+
+  “Copyright” also means copyright-like laws that apply to other kinds of
+  works, such as semiconductor masks.
+
+  “The Program” refers to any copyrightable work licensed under this
+  License.  Each licensee is addressed as “you”. “Licensees” and
+  “recipients” may be individuals or organizations.
+
+  To “modify” a work means to copy from or adapt all or part of the work in
+  a fashion requiring copyright permission, other than the making of an
+  exact copy. The resulting work is called a “modified version” of the
+  earlier work or a work “based on” the earlier work.
+
+  A “covered work” means either the unmodified Program or a work based on
+  the Program.
+
+  To “propagate” a work means to do anything with it that, without
+  permission, would make you directly or secondarily liable for
+  infringement under applicable copyright law, except executing it on a
+  computer or modifying a private copy. Propagation includes copying,
+  distribution (with or without modification), making available to the
+  public, and in some countries other activities as well.
+
+  To “convey” a work means any kind of propagation that enables other
+  parties to make or receive copies. Mere interaction with a user through a
+  computer network, with no transfer of a copy, is not conveying.
+
+  An interactive user interface displays “Appropriate Legal Notices” to the
+  extent that it includes a convenient and prominently visible feature that
+  (1) displays an appropriate copyright notice, and (2) tells the user that
+  there is no warranty for the work (except to the extent that warranties
+  are provided), that licensees may convey the work under this License, and
+  how to view a copy of this License. If the interface presents a list of
+  user commands or options, such as a menu, a prominent item in the list
+  meets this criterion.
+
+  1. Source Code.
+
+  The “source code” for a work means the preferred form of the work for
+  making modifications to it. “Object code” means any non-source form of a
+  work.
+
+  A “Standard Interface” means an interface that either is an official
+  standard defined by a recognized standards body, or, in the case of
+  interfaces specified for a particular programming language, one that is
+  widely used among developers working in that language.  The “System
+  Libraries” of an executable work include anything, other than the work as
+  a whole, that (a) is included in the normal form of packaging a Major
+  Component, but which is not part of that Major Component, and (b) serves
+  only to enable use of the work with that Major Component, or to implement
+  a Standard Interface for which an implementation is available to the
+  public in source code form. A “Major Component”, in this context, means a
+  major essential component (kernel, window system, and so on) of the
+  specific operating system (if any) on which the executable work runs, or
+  a compiler used to produce the work, or an object code interpreter used
+  to run it.
+
+  The “Corresponding Source” for a work in object code form means all the
+  source code needed to generate, install, and (for an executable work) run
+  the object code and to modify the work, including scripts to control
+  those activities. However, it does not include the work's System
+  Libraries, or general-purpose tools or generally available free programs
+  which are used unmodified in performing those activities but which are
+  not part of the work. For example, Corresponding Source includes
+  interface definition files associated with source files for the work, and
+  the source code for shared libraries and dynamically linked subprograms
+  that the work is specifically designed to require, such as by intimate
+  data communication or control flow between those subprograms and other
+  parts of the work.
+
+  The Corresponding Source need not include anything that users can
+  regenerate automatically from other parts of the Corresponding Source.
+
+  The Corresponding Source for a work in source code form is that same work.
+
+
+2. Acceptance
+
+By using the software, you agree to all of the terms and conditions below.
+
+3. Copyright License
+
+The licensor grants you a non-exclusive, royalty-free, worldwide,
+non-sublicensable, non-transferable license to use, copy, distribute, make
+available, and prepare derivative works of the software, in each case subject to
+the limitations and conditions below.
+
+4. Limitations
+
+You may not provide the software to third parties as a hosted or managed
+service, where the service provides users with access to any substantial set of
+the features or functionality of the software.
+
+You may not move, change, disable, or circumvent the license key functionality
+in the software, and you may not remove or obscure any functionality in the
+software that is protected by the license key.
+
+You may not alter, remove, or obscure any licensing, copyright, or other notices
+of the licensor in the software. Any use of the licensor’s trademarks is subject
+to applicable law.
+
+5. Patents
+
+The licensor grants you a license, under any patent claims the licensor can
+license, or becomes able to license, to make, have made, use, sell, offer for
+sale, import and have imported the software, in each case subject to the
+limitations and conditions in this license. This license does not cover any
+patent claims that you cause to be infringed by modifications or additions to
+the software. If you or your company make any written claim that the software
+infringes or contributes to infringement of any patent, your patent license for
+the software granted under these terms ends immediately. If your company makes
+such a claim, your patent license ends immediately for work on behalf of your
+company.
+
+6. Notices
+
+You must ensure that anyone who gets a copy of any part of the software from you
+also gets a copy of these terms.
+
+If you modify the software, you must include in any modified copies of the
+software prominent notices stating that you have modified the software.
+
+7. No Other Rights
+
+These terms do not imply any licenses other than those expressly granted in
+these terms.
+
+8. Termination
+
+If you use the software in violation of these terms, such use is not licensed,
+and your licenses will automatically terminate. If the licensor provides you
+with a notice of your violation, and you cease all violation of this license no
+later than 30 days after you receive that notice, your licenses will be
+reinstated retroactively. However, if you violate these terms after such
+reinstatement, any additional violation of these terms will cause your licenses
+to terminate automatically and permanently.
+
+9. No Liability
+
+As far as the law allows, the software comes as is, without any warranty or
+condition, and the licensor will not be liable to you for any damages arising
+out of these terms or the use or nature of the software, under any kind of
+legal claim.
