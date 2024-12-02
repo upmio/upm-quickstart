@@ -1,4 +1,4 @@
->  English | [中文](README_zh.md)
+> [English](README.md) | 中文
 
 # UPM 社区版快速安装指南
 
