@@ -1,3 +1,5 @@
+>  English | [中文](README_zh.md)
+
 # UPM 社区版快速安装指南
 
 本指南将引导您快速安装和配置UPM社区版。  请确保您已具备基本的 Kubernetes 和 Docker 知识。
