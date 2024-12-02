@@ -29,6 +29,7 @@
 ### 2. 操作系统版本
 
 **Linux:**
+
 - RHEL9, Rocky Linux9
 
 **Windows:**
@@ -43,7 +44,7 @@
 
 Minikube 用于在本地创建 Kubernetes 集群。 请根据您的操作系统选择相应的驱动程序和安装方法。
 
-### Linux
+### Linux **(x86)**
 
 #### 1. 安装 minikube driver（docker）
 
@@ -76,16 +77,18 @@ export LIMIT_MEMORY="16G"
 minikube start -p "minikube" --driver=docker \
   --nodes=2 \
   --kubernetes-version="${KUBE_VERSION}" \
-  --memory="${LIMIT_MEMORY}" --cpus="${LIMIT_CPUS}" \
-  --base-image='registry.cn-hangzhou.aliyuncs.com/google_containers/kicbase:v0.0.45'
+  --memory="${LIMIT_MEMORY}" --cpus="${LIMIT_CPUS}"
 ```
 
-### MacOS （arm）
+
+
+### MacOS for Apple Silicon
 
 #### 1. 安装 minikube driver（docker）
-推荐使用 Podman Desktop 作为 minikube driver。 以下是在 MacOS 系统上安装 Podman Desktop 的示例：
 
-安装 Podman Desktop: [Podman Desktop 下载](https://podman.io/) *(请替换为 Podman Desktop 官方下载链接)*
+推荐使用 Docker Desktop 作为 minikube driver。
+
+安装 Docker Desktop: [Docker Desktop 下载](https://desktop.docker.com/mac/main/arm64/Docker.dmg?utm_source=docker&utm_medium=webreferral&utm_campaign=dd-smartbutton&utm_location=module&_gl=1*1nk4x9v*_gcl_au*MTIxMDQ3MzgyLjE3Mjk3Mzk5Njg.*_ga*NDIyMjM4MTYzLjE2NTE2NzEzNjY.*_ga_XJWPQMJYHQ*MTczMzEzNzE1My4xODQuMS4xNzMzMTM3MzM0LjE5LjAuMA..) *(请替换为 Podman Desktop 官方下载链接)*
 
 安装完成后，在 Podman Desktop 的设置中，根据您的系统资源情况调整 CPU 和内存限制 (例如 12C24G)。
 
@@ -96,7 +99,9 @@ curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-darwin
 sudo install minikube-darwin-arm64 /usr/local/bin/minikube
 ```
 
-#### 3. 启动 minikube 集群
+#### 3.点击启动docker
+
+#### 4. 启动 minikube 集群
 
 ```bash
 export KUBE_VERSION="v1.30.6"
@@ -106,12 +111,15 @@ export LIMIT_MEMORY="16G"
 minikube start -p "minikube" --driver=podman \
   --nodes=2 \
   --container-runtime=cri-o --kubernetes-version="${KUBE_VERSION}" \
-  --memory="${LIMIT_MEMORY}" --cpus="${LIMIT_CPUS}"
+  --memory="${LIMIT_MEMORY}" --cpus="${LIMIT_CPUS}" 
 ```
 
-### Windows
+
+
+### Windows (x86)
 
 #### 1. 安装 minikube driver（Hyper-V）
+
 推荐使用 Hyper-V 作为 minikube driver。 以下是在 Windows 系统上安装 Hyper-V 的示例：
 
 **启用 Hyper-V:** 以管理员身份运行 PowerShell，执行以下命令：
@@ -123,6 +131,7 @@ Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All
 系统可能需要重启。
 
 ##### 2. 安装 minikube
+
 在 x86-64 Windows 系统上，建议使用 `.exe` 安装程序安装 Minikube 的最新稳定版本：
 
 下载并运行最新版本的安装程序：[Minikube 最新版本下载](https://storage.googleapis.com/minikube/releases/latest/minikube-installer.exe)  *(请替换为 Minikube 官方提供的最新下载链接)*
@@ -158,6 +167,8 @@ minikube start -p "minikube" --driver=hyperv \
   --memory="${LIMIT_MEMORY}" --cpus="${LIMIT_CPUS}"
 ```
 
+
+
 ## 安装 UPM
 
 ### 1. 安装 UPM Platform
@@ -165,37 +176,17 @@ minikube start -p "minikube" --driver=hyperv \
 运行安装脚本：
 
 ```bash
-sh -x quickstart/platform/install.sh
+curl -sSL https://raw.githubusercontent.com/upmio/upm-quickstart/refs/heads/main/platform/install.sh | sh -
 ```
 
-在继续下一步之前，请等待返回以下消息：
+安装完成后，使用以下命令验证 `upm-engine` 部署是否成功：
 
 ```bash
-[Info][2024-11-04T11:23:47+0800]: All pods are ready or succeeded
-NAME                                            READY   STATUS      RESTARTS     AGE     IP            NODE       NOMINATED NODE   READINESS GATES
-upm-platform-auth-6bd94cb567-jm9bd               1/1     Running     0            2m18s   10.244.0.51   minikube   <none>           <none>
-upm-platform-elasticsearch-ms-7ff7654dfb-hzmdt   1/1     Running     0            2m18s   10.244.0.50   minikube   <none>           <none>
-upm-platform-gateway-759d64d8cf-b6rhl            1/1     Running     0            2m18s   10.244.0.55   minikube   <none>           <none>
-upm-platform-kafka-ms-7796666475-gtdkp           1/1     Running     0            2m18s   10.244.0.62   minikube   <none>           <none>
-upm-platform-mysql-0                             1/1     Running     0            2m18s   10.244.0.63   minikube   <none>           <none>
-upm-platform-mysql-ms-56b9bddd99-6zcjc           1/1     Running     0            2m18s   10.244.0.47   minikube   <none>           <none>
-upm-platform-nacos-0                             1/1     Running     2 (2m ago)   2m18s   10.244.0.64   minikube   <none>           <none>
-upm-platform-nacos-init-db-kqk4q                 0/1     Completed   0            2m18s   10.244.0.56   minikube   <none>           <none>
-upm-platform-nginx-6597db9db8-2nbw9              1/1     Running     0            2m18s   10.244.0.52   minikube   <none>           <none>
-upm-platform-operatelog-585d7b644c-928jd         1/1     Running     0            2m18s   10.244.0.53   minikube   <none>           <none>
-upm-platform-postgresql-ms-79678fff-ftxbz        1/1     Running     0            2m18s   10.244.0.48   minikube   <none>           <none>
-upm-platform-redis-cluster-ms-68f4fc9f49-94j4r   1/1     Running     0            2m18s   10.244.0.57   minikube   <none>           <none>
-upm-platform-redis-master-0                      1/1     Running     0            2m18s   10.244.0.58   minikube   <none>           <none>
-upm-platform-redis-ms-69c45859b4-rs9c4           1/1     Running     0            2m18s   10.244.0.59   minikube   <none>           <none>
-upm-platform-resource-68c6d8c797-b2nq5           1/1     Running     0            2m18s   10.244.0.49   minikube   <none>           <none>
-upm-platform-ui-5665978468-48nx5                 1/1     Running     0            2m18s   10.244.0.60   minikube   <none>           <none>
-upm-platform-user-6b6b5d6446-dt4mj               1/1     Running     0            2m18s   10.244.0.61   minikube   <none>           <none>
-upm-platform-zookeeper-ms-79d4dd99f-ftzw6        1/1     Running     0            2m18s   10.244.0.54   minikube   <none>           <none>
-[Info][2024-11-04T11:23:47+0800]: upm-platform ready, elapsed time: 40 seconds
-job.batch "upm-platform-install" deleted
+kubectl get pod -n upm-system | grep upm-platform
 ```
 
 您应该看到多个 `upm-platform` 相关的 Pod 处于 `Running` 状态。
+
 
 
 ### 2. 安装 UPM Engine
@@ -203,7 +194,7 @@ job.batch "upm-platform-install" deleted
 运行安装脚本：
 
 ```bash
-sh -x quickstart/engine/install.sh
+https://raw.githubusercontent.com/upmio/upm-quickstart/refs/heads/main/engine/install.sh
 ```
 
 安装完成后，使用以下命令验证 `upm-engine` 部署是否成功：
@@ -221,7 +212,7 @@ kubectl get pod -n upm-system | grep upm-engine
 运行安装脚本：
 
 ```
-sh -x quickstart/engine/install-cert-manager.sh
+https://github.com/upmio/upm-quickstart/blob/main/engine/uninstall-cert-manager.sh
 ```
 
 请检查 `cert-manager` 的 Pod 是否正常运行：
@@ -347,10 +338,3 @@ kubectl port-forward --address 0.0.0.0 -n upm-system services/upm-platform-nginx
 审批>同意>确认>执行>确认>前往
 
 MySQL实例创建中等待完成
-
-
-
-
-
-
-
