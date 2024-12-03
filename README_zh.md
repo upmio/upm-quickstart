@@ -88,9 +88,9 @@ minikube start -p "minikube" --driver=docker \
 
 推荐使用 Docker Desktop 作为 minikube driver。
 
-安装 Docker Desktop: [Docker Desktop 下载](https://desktop.docker.com/mac/main/arm64/Docker.dmg?utm_source=docker&utm_medium=webreferral&utm_campaign=dd-smartbutton&utm_location=module&_gl=1*1nk4x9v*_gcl_au*MTIxMDQ3MzgyLjE3Mjk3Mzk5Njg.*_ga*NDIyMjM4MTYzLjE2NTE2NzEzNjY.*_ga_XJWPQMJYHQ*MTczMzEzNzE1My4xODQuMS4xNzMzMTM3MzM0LjE5LjAuMA..) *(请替换为 Podman Desktop 官方下载链接)*
+安装 Docker Desktop: [Docker Desktop 下载](https://desktop.docker.com/mac/main/arm64/Docker.dmg?utm_source=docker&utm_medium=webreferral&utm_campaign=dd-smartbutton&utm_location=module&_gl=1*1nk4x9v*_gcl_au*MTIxMDQ3MzgyLjE3Mjk3Mzk5Njg.*_ga*NDIyMjM4MTYzLjE2NTE2NzEzNjY.*_ga_XJWPQMJYHQ*MTczMzEzNzE1My4xODQuMS4xNzMzMTM3MzM0LjE5LjAuMA..) *(请替换为 Docker Desktop 官方下载链接)*
 
-安装完成后，在 Podman Desktop 的设置中，根据您的系统资源情况调整 CPU 和内存限制 (例如 12C24G)。
+安装完成后，在 Docker Desktop 的设置中，根据您的系统资源情况调整 CPU 和内存限制 (例如 12C24G)。
 
 #### 2. 安装 minikube
 
@@ -108,7 +108,7 @@ export KUBE_VERSION="v1.30.6"
 export LIMIT_CPUS="8"
 export LIMIT_MEMORY="16G"
 
-minikube start -p "minikube" --driver=podman \
+minikube start -p "minikube" --driver=docker \
   --nodes=2 \
   --kubernetes-version="${KUBE_VERSION}" \
   --memory="${LIMIT_MEMORY}" --cpus="${LIMIT_CPUS}" 
