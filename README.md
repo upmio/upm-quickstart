@@ -183,7 +183,7 @@ Minikube is used to create a local Kubernetes cluster. Please choose the appropr
    - Run the installation script:
 
      ```
-     curl -sSL https://raw.githubusercontent.com/upmio/upm-quickstart/refs/heads/main/engine/install.sh | sh -
+     curl -sSL https://raw.githubusercontent.com/upmio/upm-quickstart/refs/heads/main/engine/install-cert-manager.sh | sh -
      ```
 
    - Check if the cert-manager Pods are running normally:
