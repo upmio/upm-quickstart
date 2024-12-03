@@ -212,7 +212,7 @@ kubectl get pod -n upm-system | grep upm-engine
 运行安装脚本：
 
 ```
-curl -sSL https://raw.githubusercontent.com/upmio/upm-quickstart/refs/heads/main/engine/uninstall-cert-manager.sh | sh -
+curl -sSL https://raw.githubusercontent.com/upmio/upm-quickstart/refs/heads/main/engine/install-cert-manager.sh | sh -
 ```
 
 请检查 `cert-manager` 的 Pod 是否正常运行：
