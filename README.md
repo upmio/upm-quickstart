@@ -72,8 +72,8 @@ Minikube is used to create a local Kubernetes cluster. Please choose the appropr
 1. Install Minikube Driver (Docker)
 
    - It is recommended to use Docker Desktop as the Minikube driver.
-   - Install Docker Desktop: [Docker Desktop Download] (Please replace with the official Podman Desktop download link)
-   - After installation, adjust the CPU and memory limits in Podman Desktop settings according to your system resources (e.g., 12C24G).
+   - Install Docker Desktop: [Docker Desktop Download] (Please replace with the official Docker Desktop download link)
+   - After installation, adjust the CPU and memory limits in Docker Desktop settings according to your system resources (e.g., 12C24G).
 
 2. Install Minikube
 
