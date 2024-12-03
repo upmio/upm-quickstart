@@ -110,7 +110,7 @@ export LIMIT_MEMORY="16G"
 
 minikube start -p "minikube" --driver=podman \
   --nodes=2 \
-  --container-runtime=cri-o --kubernetes-version="${KUBE_VERSION}" \
+  --kubernetes-version="${KUBE_VERSION}" \
   --memory="${LIMIT_MEMORY}" --cpus="${LIMIT_CPUS}" 
 ```
 
