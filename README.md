@@ -91,9 +91,9 @@ Minikube is used to create a local Kubernetes cluster. Please choose the appropr
    export LIMIT_CPUS="8"
    export LIMIT_MEMORY="16G"
    
-   minikube start -p "minikube" --driver=podman \
+   minikube start -p "minikube" --driver=docker \
      --nodes=2 \
-     --container-runtime=cri-o --kubernetes-version="${KUBE_VERSION}" \
+     --kubernetes-version="${KUBE_VERSION}" \
      --memory="${LIMIT_MEMORY}" --cpus="${LIMIT_CPUS}"
    ```
 
