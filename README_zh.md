@@ -194,7 +194,7 @@ kubectl get pod -n upm-system | grep upm-platform
 运行安装脚本：
 
 ```bash
-https://raw.githubusercontent.com/upmio/upm-quickstart/refs/heads/main/engine/install.sh
+curl -sSL https://raw.githubusercontent.com/upmio/upm-quickstart/refs/heads/main/engine/install.sh | sh -
 ```
 
 安装完成后，使用以下命令验证 `upm-engine` 部署是否成功：
@@ -212,7 +212,7 @@ kubectl get pod -n upm-system | grep upm-engine
 运行安装脚本：
 
 ```
-https://github.com/upmio/upm-quickstart/blob/main/engine/uninstall-cert-manager.sh
+curl -sSL https://github.com/upmio/upm-quickstart/blob/main/engine/uninstall-cert-manager.sh | sh -
 ```
 
 请检查 `cert-manager` 的 Pod 是否正常运行：
